@@ -1,0 +1,58 @@
+<head>
+  <title>E-Commerce</title>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  </head>
+  <body>
+  <nav class="header">
+    <mat-toolbar class="bar">
+
+
+      <div class="dropdown">
+      <button
+        mat-icon-button
+        class="menu-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+<div class="dropdown-content">
+<a href="#">Home</a>
+<a href="#">Contact</a>
+<a href="#">About Us</a>
+</div>
+
+      </button>
+  
+    </div>
+
+      <div class="box"><span class="text">SUPER STORE</span></div>
+      <span class="sample"></span>
+        <button class="product-link"routerLink="/product">
+          PRODUCTS
+          </button>
+      <button 
+        mat-icon-button
+        class="favorite-icon"
+        aria-label="Example icon-button with heart icon"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="share-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+    
+  </nav>
+  <h1>PRODUCTS AT THE LOWEST PRICE....</h1> 
+  <h2>"Early Bird Catches the Worm"</h2>
+
+  <router-outlet></router-outlet>
+  
+  </body>
+  
