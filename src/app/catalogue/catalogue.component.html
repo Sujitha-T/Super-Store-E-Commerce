@@ -117,6 +117,76 @@
           </mat-error>
         </mat-form-field>
       </div>
+
+      <div class="col-12 md:col-6 lg:col-3">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Discount</mat-label>
+          <input type="number" matInput formControlName="discount" 
+                 placeholder="Discount">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>-->
+          <mat-error *ngIf="productForm.get('discount').hasError('required')">
+            This Field is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="col-12 md:col-6 lg:col-3">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Rating</mat-label>
+          <input type="number" matInput formControlName="rating" 
+                 placeholder="Rating">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>-->
+          <mat-error *ngIf="productForm.get('rating').hasError('required')">
+            This Field is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 md:col-6 lg:col-3">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Brand</mat-label>
+          <input type="text" matInput formControlName="brand" 
+                 placeholder="Brand">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>-->
+          <mat-error *ngIf="productForm.get('brand').hasError('required')">
+            This Field is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 md:col-6 lg:col-3">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Stock</mat-label>
+          <input type="number" matInput formControlName="stock" 
+                 placeholder="Stock">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>-->
+          <mat-error *ngIf="productForm.get('stock').hasError('required')">
+            This Field is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+
   </div>
 
 

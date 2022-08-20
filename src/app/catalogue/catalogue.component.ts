@@ -36,7 +36,11 @@ initializeForm(product){
     title: [product.title, Validators.required],
     description: [product.description, Validators.required],
     category: [product.category, Validators.required],
-    price: [product.price, Validators.required]
+    price: [product.price, Validators.required],
+    discount: [product.discountPercentage, Validators.required],
+    rating: [product.rating, Validators.required],
+    brand: [product.brand, Validators.required],
+    stock: [product.stock, Validators.required]
   });
 }
 
