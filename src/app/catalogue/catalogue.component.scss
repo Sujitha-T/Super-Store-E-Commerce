@@ -1,4 +1,42 @@
 :host{
+
+  .product-form{
+    background: #00ccff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0e6fdf, #1ccde4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #40bec7, #5f8ead); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 50px;
+  }
+
+  .f-center{
+    display:flex;
+    justify-content: center;
+   // background-color: red;
+   button{font-weight: 200;
+    font-size:large;
+    margin-top:20px;
+    color:black;
+  background-color: rgb(255, 0, 43);}
+   button:hover{
+     border:1px solid;
+     box-shadow:1rem;
+     color:black;
+     background-color: #6de91b;
+   }
+  }
+  
+
+  
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .example-full-width{background-color:white;}
+  
 .product-center{
 display:flex;
 justify-content:center;
@@ -10,11 +48,10 @@ h1{background-color: rgb(110, 211, 236);}
   
 }
 button{background-color: rgb(46, 17, 207);
-//border:none;
+border:none;
 font-size:25px;
 font-weight: 200;
 color:white;
-
 }
 .cart{margin-left:20px;}
 button:hover{
@@ -22,25 +59,12 @@ button:hover{
   color:white;
 }
 mat-error{color:red; background-color: red;}
-.f-center{
-  display:flex;
-  justify-content: center;
-}
+
 
 //.col-12 md:col-6 lg:col-3 sm:flex-nowrap{
 //display: flex;
 //justify-content: center;
 //}
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
-}
-.example-full-width{color:red;}
 
 .product-labels{
   align-items: center;
