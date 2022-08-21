@@ -5,6 +5,8 @@ import { Product } from '../module/product';
 import { appConstant } from '../app.constant';
 import { environment } from '../environment/environment';
 import { Validators,FormBuilder, FormGroup } from '@angular/forms';
+import { ApiService } from '../service/api.service';
+import { CommonService } from '../service/common.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -14,12 +16,14 @@ import { Validators,FormBuilder, FormGroup } from '@angular/forms';
 export class CatalogueComponent implements OnInit {
   product: Product | any = '';
   productForm:FormGroup|undefined;
- // id: number | String = '';
+  id: number | String = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private apiService: ApiService,
+    private commonService: CommonService
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +32,12 @@ export class CatalogueComponent implements OnInit {
     });
     this.initialize();
   }
+
+  get appConstant() {
+    return appConstant;
+  }
+
+
 initialize(){
   this.initializeForm(this.product);
 }
@@ -44,7 +54,9 @@ initializeForm(product){
   });
 }
 
-
+//initializeForm(product: any) {
+ // this.productForm = this.commonService.createProductForm(product);
+//}
 
 
 

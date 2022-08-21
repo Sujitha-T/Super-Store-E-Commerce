@@ -57,7 +57,7 @@
 
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Title</mat-label>
-          <input type="email" matInput formControlName="title" 
+          <input type="email" matInput formControlName="{{ appConstant.forms.product.title }}" 
                  placeholder="Title">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!--<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -73,7 +73,7 @@
 
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Description</mat-label>
-          <input type="email" matInput formControlName="description" 
+          <input type="text" matInput formControlName="{{ appConstant.forms.product.description }}" 
                  placeholder="Description">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -90,7 +90,7 @@
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Category</mat-label>
-          <input type="email" matInput formControlName="category"
+          <input type="text" matInput formControlName="{{ appConstant.forms.product.category }}"
                  placeholder="Category">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -106,7 +106,7 @@
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Price</mat-label>
-          <input type="number" matInput formControlName="price" 
+          <input type="number" matInput formControlName="{{ appConstant.forms.product.price }" 
                  placeholder="Price">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -144,7 +144,7 @@
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Rating</mat-label>
           <input type="number" matInput formControlName="rating" 
-                 placeholder="Rating">
+                 placeholder="{{ appConstant.forms.product.rating }}">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
@@ -152,13 +152,16 @@
           <mat-error *ngIf="productForm.get('rating').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
+          <mat-error *ngIf="productForm.get('rating').hasError('max')"
+            >Max rating is <strong>10</strong></mat-error
+          >
         </mat-form-field>
       </div>
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Brand</mat-label>
-          <input type="text" matInput formControlName="brand" 
+          <input type="text" matInput formControlName="{{ appConstant.forms.product.brand }}" 
                  placeholder="Brand">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -173,7 +176,7 @@
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Stock</mat-label>
-          <input type="number" matInput formControlName="stock" 
+          <input type="number" matInput formControlName="{{ appConstant.forms.product.stock }}" 
                  placeholder="Stock">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
