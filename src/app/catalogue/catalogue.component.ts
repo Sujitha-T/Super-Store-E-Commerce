@@ -17,6 +17,7 @@ export class CatalogueComponent implements OnInit {
   product: Product | any = '';
   productForm:FormGroup|undefined;
   id: number | String = '';
+  max:number=10;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -70,13 +71,31 @@ initializeForm(product: any) {
       });
   }
 
-onSubmit (formValue:any , isValid:boolean){
-console.log(formValue);
-console.log(isValid);
-/*this.http.put('${environment.dummyurl}${appConstant.apiRoute.products}/${id}')
-.subscribe((data)=>{
-console.log('data updated');
-console.log(data);
-});*/
+/*onSubmit (formValue:any , isValid:boolean){
+  if(isValid){console.log(formValue);
+    console.log(isValid);
+    this.http.put('${environment.dummyurl}${appConstant.apiRoute.products}/${id}')
+    .subscribe((data)=>{
+    console.log('data updated');
+    console.log(data);
+    })}
+
+}*/
+
+onSubmit(formData: any, isValid: boolean) {
+  if (isValid) {
+    console.log(formData);
+    this.apiService
+      .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
+      .subscribe(
+        (data) => {
+          console.log('data updated');
+          console.log(data);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+  }
 }
 }

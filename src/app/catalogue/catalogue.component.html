@@ -49,7 +49,7 @@
 
 
 
-<div class="product-form" *ngIf="productForm">
+<div class="product-form" *ngIf="productForm && appConstant">
   <form novalidate (ngSubmit)="onSubmit(productForm.valid,productForm.value)" [formGroup]="productForm">
 
     <div class="grid">
@@ -59,10 +59,7 @@
           <mat-label>Title</mat-label>
           <input type="email" matInput formControlName="{{ appConstant.forms.product.title }}" 
                  placeholder="Title">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!--<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+          
           <mat-error *ngIf="productForm.get('title').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -75,10 +72,7 @@
           <mat-label>Description</mat-label>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.description }}" 
                  placeholder="Description">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+        
           <mat-error *ngIf="productForm.get('description').hasError('required')">
             This Field is<strong>required</strong>
           </mat-error>
@@ -92,10 +86,7 @@
           <mat-label>Category</mat-label>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.category }}"
                  placeholder="Category">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+          
           <mat-error *ngIf="productForm.get('category').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -108,10 +99,7 @@
           <mat-label>Price</mat-label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.price}}" 
                  placeholder="Price">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+          
           <mat-error *ngIf="productForm.get('price').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -123,10 +111,7 @@
           <mat-label>Discount</mat-label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.discountPercentage}}" 
                  placeholder="Discount">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+        
           <mat-error *ngIf="productForm.get('discount').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -139,10 +124,7 @@
           <mat-label>Rating</mat-label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.rating }}" 
                  placeholder="rating">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+         
           <mat-error *ngIf="productForm.get('rating').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -157,10 +139,7 @@
           <mat-label>Brand</mat-label>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.brand }}" 
                  placeholder="Brand">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+         
           <mat-error *ngIf="productForm.get('brand').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -172,10 +151,7 @@
           <mat-label>Stock</mat-label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.stock }}" 
                  placeholder="Stock">
-          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>-->
+          
           <mat-error *ngIf="productForm.get('stock').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
@@ -192,11 +168,11 @@
     
 <button color="warn" mat-button type="submit" [disabled]="productForm.invalid">Submit</button>
 </div>
-<!--<button type="submit" [disabled]="productForm.invalid">Sign up</button>-->
+
 
 
 
   </form>
 </div>
-
+<!--<app-product-form product="product"></app-product-form>-->
 </div>

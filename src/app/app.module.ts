@@ -11,6 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { ProductFormComponent } from './catalogue/product-form/product-form.component';
 //import { Validators,  FormGroup } from '@angular/forms';
 
 @NgModule({
