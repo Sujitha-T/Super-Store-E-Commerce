@@ -14,6 +14,7 @@ export class CommonService {
       [appConstant.forms.product.title]: [product.title,[Validators.required]],
       [appConstant.forms.product.description]: [product.description, [Validators.required]],
       [appConstant.forms.product.category]: [product.category, [Validators.required]],
+      [appConstant.forms.product. discountPercentage]: [product. discountPercentage, [Validators.required]],
       [appConstant.forms.product.price]: [product.price, [Validators.required]],
       [appConstant.forms.product.stock]: [product.stock, [Validators.required]],
       [appConstant.forms.product.brand]: [product.brand, [Validators.required]],

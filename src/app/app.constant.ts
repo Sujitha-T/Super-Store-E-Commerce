@@ -6,8 +6,9 @@ export const appConstant: any = {
     product: {
       title: 'title',
       description: 'description',
-      category: 'category',
       price: 'price',
+      discountPercentage:'discount',
+      category: 'category',
       brand: 'brand',
       rating: 'rating',
       stock: 'stock',

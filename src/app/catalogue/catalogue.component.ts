@@ -41,7 +41,7 @@ export class CatalogueComponent implements OnInit {
 initialize(){
   this.initializeForm(this.product);
 }
-initializeForm(product){
+/*initializeForm(product){
   this.productForm=this.fb.group({
     title: [product.title, Validators.required],
     description: [product.description, Validators.required],
@@ -52,11 +52,11 @@ initializeForm(product){
     brand: [product.brand, Validators.required],
     stock: [product.stock, Validators.required]
   });
-}
+}*/
 
-//initializeForm(product: any) {
- // this.productForm = this.commonService.createProductForm(product);
-//}
+initializeForm(product: any) {
+  this.productForm = this.commonService.createProductForm(product);
+}
 
 
 

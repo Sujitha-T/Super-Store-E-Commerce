@@ -106,7 +106,7 @@
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Price</mat-label>
-          <input type="number" matInput formControlName="{{ appConstant.forms.product.price }" 
+          <input type="number" matInput formControlName="{{ appConstant.forms.product.price}}" 
                  placeholder="Price">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -121,7 +121,7 @@
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Discount</mat-label>
-          <input type="number" matInput formControlName="discount" 
+          <input type="number" matInput formControlName="{{ appConstant.forms.product.discountPercentage}}" 
                  placeholder="Discount">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -134,17 +134,11 @@
       </div>
 
 
-
-
-
-
-
-
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Rating</mat-label>
-          <input type="number" matInput formControlName="rating" 
-                 placeholder="{{ appConstant.forms.product.rating }}">
+          <input type="number" matInput formControlName="{{ appConstant.forms.product.rating }}" 
+                 placeholder="rating">
           <!--<mat-hint>Errors appear instantly!</mat-hint>-->
          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
