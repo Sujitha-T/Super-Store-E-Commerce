@@ -1,12 +1,5 @@
 :host{
 
-  .product-form{
-    background: #00ccff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0e6fdf, #1ccde4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #40bec7, #5f8ead); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 50px;
-  }
-
   .f-center{
     display:flex;
     justify-content: center;
@@ -23,7 +16,13 @@ background: linear-gradient(to right, #40bec7, #5f8ead); /* W3C, IE 10+/ Edge, F
      background-color: #6de91b;
    }
   }
-  
+  .product-form{
+    background: #00ccff; 
+background: -webkit-linear-gradient(to right, #0e6fdf, #1ccde4);  
+background: linear-gradient(to right, #40bec7, #5f8ead); 
+    padding: 50px;
+    
+  }
 
   
   .example-form {
