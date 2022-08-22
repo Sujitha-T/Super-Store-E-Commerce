@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { ProductFormComponent } from './catalogue/product-form/product-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { Validators,  FormGroup } from '@angular/forms';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProductFormComponent } from './catalogue/product-form/product-form.comp
     //Validators,
     //FormGroup,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
