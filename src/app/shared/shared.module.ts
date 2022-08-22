@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {  HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -15,14 +16,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule
+    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule,MatGridListModule
   ],
 
 exports:[ CommonModule,
   ReactiveFormsModule,
   FormsModule,
     HttpClientModule,
-  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule
+  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule,MatGridListModule
 ],
 
 
