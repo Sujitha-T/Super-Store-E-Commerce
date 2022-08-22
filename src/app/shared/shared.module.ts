@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {  HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   imports: [
@@ -14,14 +15,14 @@ import {  HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule
+    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule
   ],
 
 exports:[ CommonModule,
   ReactiveFormsModule,
   FormsModule,
     HttpClientModule,
-  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule
+  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatFormFieldModule
 ],
 
 
