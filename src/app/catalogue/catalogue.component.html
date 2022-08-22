@@ -50,13 +50,13 @@
 
 
 <div class="product-form" *ngIf="productForm && appConstant">
-  <form  (ngSubmit)="onSubmit(productForm.valid,productForm.value)" [formGroup]="productForm"novalidate>
+  <form  (ngSubmit)="onSubmit(productForm.valid,productForm.value)" [formGroup]="productForm" novalidate>
 
     <div class="grid">
       <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
 
         <mat-form-field class="example-full-width" appearance="fill">
-         <mat-label>Title</mat-label>
+       <!--  <mat-label>Title</mat-label>-->
           
           <input type="text" matInput formControlName="{{ appConstant.forms.product.title }}" 
                  placeholder="Title">
@@ -79,7 +79,7 @@
       <div class="col-12 md:col-6 lg:col-3">
 
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Description</mat-label>
+         <!-- <mat-label>Description</mat-label>-->
           <input type="text" matInput formControlName="{{ appConstant.forms.product.description }}" 
                  placeholder="Description">
         
@@ -93,7 +93,7 @@
       </div>
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Category</mat-label>
+          <!--<mat-label>Category</mat-label>--->
           <input type="text" matInput formControlName="{{ appConstant.forms.product.category }}"
                  placeholder="Category">
           
@@ -106,7 +106,7 @@
       </div>
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Price</mat-label>
+          <!--<mat-label>Price</mat-label>-->
           <input type="number" matInput formControlName="{{ appConstant.forms.product.price}}" 
                  placeholder="Price">
           
@@ -118,7 +118,7 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Discount</mat-label>
+         <!-- <mat-label>Discount</mat-label>-->
           <input type="number" matInput formControlName="{{ appConstant.forms.product.discountPercentage}}" 
                  placeholder="Discount">
         
@@ -131,7 +131,7 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Rating</mat-label>
+         <!-- <mat-label>Rating</mat-label>-->
           <input type="number" matInput formControlName="{{ appConstant.forms.product.rating }}" 
                  placeholder="rating">
          
@@ -146,7 +146,7 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Brand</mat-label>
+          <!--<mat-label>Brand</mat-label>-->
           <input type="text" matInput formControlName="{{ appConstant.forms.product.brand }}" 
                  placeholder="Brand">
          
@@ -158,7 +158,7 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Stock</mat-label>
+        <!--  <mat-label>Stock</mat-label>-->
           <input type="number" matInput formControlName="{{ appConstant.forms.product.stock }}" 
                  placeholder="Stock">
           
