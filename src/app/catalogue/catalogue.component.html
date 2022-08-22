@@ -50,19 +50,29 @@
 
 
 <div class="product-form" *ngIf="productForm && appConstant">
-  <form novalidate (ngSubmit)="onSubmit(productForm.valid,productForm.value)" [formGroup]="productForm">
+  <form  (ngSubmit)="onSubmit(productForm.valid,productForm.value)" [formGroup]="productForm"novalidate>
 
     <div class="grid">
       <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
 
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Title</mat-label>
-          <input type="email" matInput formControlName="{{ appConstant.forms.product.title }}" 
+         <mat-label>Title</mat-label>
+          
+          <input type="text" matInput formControlName="{{ appConstant.forms.product.title }}" 
                  placeholder="Title">
           
           <mat-error *ngIf="productForm.get('title').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
+          <!--<div class="container">
+          <label>Title*</label>
+          <br>
+          <input type='text'  formControlName='{{ appConstant.forms.product.title }}' placeholder="something">
+          <br>
+          <small style='color:red' *ngIf="productForm.get('title').invalid  ">
+            This Field is <strong>required</strong>
+          </small>
+          </div>-->
         </mat-form-field>
 
       </div>

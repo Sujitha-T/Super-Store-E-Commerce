@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { ProductFormComponent } from './catalogue/product-form/product-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
 //import { Validators,  FormGroup } from '@angular/forms';
 
 @NgModule({
@@ -24,8 +25,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
     MatGridListModule,
     HttpClientModule,
     ReactiveFormsModule,
