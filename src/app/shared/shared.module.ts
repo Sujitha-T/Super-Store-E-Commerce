@@ -9,18 +9,19 @@ import { MatInputModule } from '@angular/material/input';
 import {  HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatError, MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatGridListModule,MatFormFieldModule
+    MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatGridListModule,MatFormFieldModule,MatPaginatorModule
   ],
 
 exports:[ CommonModule,
   ReactiveFormsModule,MatError,
     HttpClientModule,
-  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatGridListModule,MatFormFieldModule
+  MatCardModule,MatButtonModule,MatToolbarModule,MatIconModule,MatInputModule,MatGridListModule,MatFormFieldModule,MatPaginatorModule
 ],
 
 

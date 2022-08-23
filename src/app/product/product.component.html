@@ -30,3 +30,13 @@
   </mat-grid-tile>
 </mat-grid-list>
 </div>
+<div class="pagination">
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="onPagination($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>
