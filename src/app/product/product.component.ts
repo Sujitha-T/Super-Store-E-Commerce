@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
   pageSize = 10;
   pageSizeOptions: number[] = [5, 10, 25, 100];
   pageEvent: PageEvent;
+  priceModel:number|undefined;
   constructor(private product: DataService,  private http:HttpClient,private router: Router) {}
 
   ngOnInit(): void {

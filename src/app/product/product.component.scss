@@ -1,11 +1,15 @@
-.images{
+.price-form{
+  background-color:lightblue;
+  display: inline;
+}
+  .images{
   object-fit: fill;
   width: 90%;
   height:100px;
 }
 .content{
   background-color: rgb(123, 187, 230);
-
+padding: 20px;
 }
 h1{
   font-size:30px;
