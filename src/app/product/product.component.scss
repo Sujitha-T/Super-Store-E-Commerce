@@ -1,6 +1,7 @@
 .price-form{
   background-color:lightblue;
-  display: inline;
+  font-size: larger;
+  display:inline-block;
 }
   .images{
   object-fit: fill;
@@ -45,11 +46,13 @@ mat-card {
 }
 
 button{
-margin-left:90px;
-
+margin:20px;
+background-color: rgb(0, 225, 255);
+align-items: center;
 }
 button:hover {
-  background-color: rgb(0, 225, 255);
+  background-color: rgb(14, 27, 29);
+  color:white;
   border:none;
   font-weight:bold;
 }
