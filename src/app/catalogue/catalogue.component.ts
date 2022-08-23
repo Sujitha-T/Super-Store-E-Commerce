@@ -18,6 +18,8 @@ export class CatalogueComponent implements OnInit {
   productForm:FormGroup|undefined;
   id: number | String = '';
   max:number=10;
+  showMessage :boolean=false;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -42,18 +44,7 @@ export class CatalogueComponent implements OnInit {
 initialize(){
   this.initializeForm(this.product);
 }
-/*initializeForm(product){
-  this.productForm=this.fb.group({
-    title: [product.title, Validators.required],
-    description: [product.description, Validators.required],
-    category: [product.category, Validators.required],
-    price: [product.price, Validators.required],
-    discount: [product.discountPercentage, Validators.required],
-    rating: [product.rating, Validators.required],
-    brand: [product.brand, Validators.required],
-    stock: [product.stock, Validators.required]
-  });
-}*/
+
 
 initializeForm(product: any) {
   this.productForm = this.commonService.createProductForm(product);
@@ -97,5 +88,13 @@ onSubmit(formData: any, isValid: boolean) {
         }
       );
   }
+}
+productUpdate(event: boolean){
+  if (!(event as any).target){
+    this.showMessage= event;
+  }
+  setTimeout(()=>{
+  this.showMessage=false;
+},3000)
 }
 }

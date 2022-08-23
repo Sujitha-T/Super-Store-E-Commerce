@@ -168,7 +168,7 @@
 
 <div class="f-center">
     
-<button color="warn" mat-button type="submit" [disabled]="productForm.invalid">Submit</button>
+<button color="warn" mat-button type="submit" [disabled]="productForm.invalid" >Submit</button>
 </div>
 
 
@@ -176,5 +176,8 @@
 
   </form>
 </div>
-<!--<app-product-form product="product"></app-product-form>-->
+<!--<app-product-form [product]="product"></app-product-form>-->
+<p *ngIf="showMessage" class="p-success-message">
+  Product has been updated successfully!!
+</p>
 </div>
