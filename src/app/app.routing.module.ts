@@ -5,8 +5,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   {
-    path: 'product',
-    component: ProductComponent,
+    path: '',
+    component: ProductComponent,pathMatch:"full"
   },
   
   { path: 'catalogue', component: CatalogueComponent },

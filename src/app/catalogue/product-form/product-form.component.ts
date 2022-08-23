@@ -29,21 +29,34 @@ export class ProductFormComponent implements OnInit {
   get appConstant() {
     return appConstant;
   }
-  onSubmit(formData: any, isValid: boolean) {
-    if (isValid) {
-      //console.log(formData);
-      this.apiService
-        .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
-        .subscribe(
-          (data) => {
-            console.log('data updated');
-            console.log(data);
-            this.submit.emit(true);
-          },
-          (err) => {
-            console.log(err);
-          }
-        );
+  // onSubmit(formData: any, isValid: boolean) {
+  //   if (isValid) {
+  //     //console.log(formData);
+  //     this.apiService
+  //       .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
+  //       .subscribe(
+  //         (data) => {
+  //           console.log('data updated');
+  //           console.log(data);
+  //           this.submit.emit(true);
+  //         },
+  //         (err) => {
+  //          // console.log(err);
+  //         }
+  //       );
+  //   }
+  // }
+  onSubmit(formValue: any, isValid: boolean){
+    // console.log(formValue)
+    if (isValid){
+     this.apiService.httpPut(`${appConstant.apiRoute.products}/${this.product?.id}`,formValue)
+     .subscribe(data=> {
+       console.log(data);
+       this.submit.emit(true);
+       this.commonService.sendProductMessage(true);
+     },(err)=>{
+       //console.log(err);
+     });
     }
-  }
+   }
 }
