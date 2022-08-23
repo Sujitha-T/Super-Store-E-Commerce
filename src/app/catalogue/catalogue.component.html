@@ -56,34 +56,28 @@
       <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
 
         <mat-form-field class="example-full-width" appearance="fill">
-       <!--  <mat-label>Title</mat-label>-->
-          
+        <label><strong>Title*</strong></label>
+          <br>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.title }}" 
                  placeholder="Title">
-          
-          <mat-error *ngIf="productForm.get('title').hasError('required')">
+        <br>
+          <mat-error style='color:red' *ngIf="productForm.get('title').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
-          <!--<div class="container">
-          <label>Title*</label>
-          <br>
-          <input type='text'  formControlName='{{ appConstant.forms.product.title }}' placeholder="something">
-          <br>
-          <small style='color:red' *ngIf="productForm.get('title').invalid  ">
-            This Field is <strong>required</strong>
-          </small>
-          </div>-->
+          
         </mat-form-field>
 
       </div>
       <div class="col-12 md:col-6 lg:col-3">
 
         <mat-form-field class="example-full-width" appearance="fill">
-         <!-- <mat-label>Description</mat-label>-->
+          <label><strong>Description*</strong></label>
+         <br>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.description }}" 
                  placeholder="Description">
+        <br>
         
-          <mat-error *ngIf="productForm.get('description').hasError('required')">
+          <mat-error style='color:red'*ngIf="productForm.get('description').hasError('required')">
             This Field is<strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -93,11 +87,11 @@
       </div>
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <!--<mat-label>Category</mat-label>--->
+          <label><strong>Category*</strong></label>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.category }}"
                  placeholder="Category">
           
-          <mat-error *ngIf="productForm.get('category').hasError('required')">
+          <mat-error style='color:red'*ngIf="productForm.get('category').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -106,11 +100,11 @@
       </div>
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <!--<mat-label>Price</mat-label>-->
+          <label><strong>Price*</strong></label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.price}}" 
                  placeholder="Price">
           
-          <mat-error *ngIf="productForm.get('price').hasError('required')">
+          <mat-error style='color:red'*ngIf="productForm.get('price').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -118,11 +112,11 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-         <!-- <mat-label>Discount</mat-label>-->
+         <label><strong>Discount*</strong></label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.discountPercentage}}" 
                  placeholder="Discount">
         
-          <mat-error *ngIf="productForm.get('discount').hasError('required')">
+          <mat-error style='color:red'*ngIf="productForm.get('discount').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -131,14 +125,14 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-         <!-- <mat-label>Rating</mat-label>-->
+         <label><strong>Rating*</strong></label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.rating }}" 
                  placeholder="rating">
          
-          <mat-error *ngIf="productForm.get('rating').hasError('required')">
+          <mat-error style='color:red' *ngIf="productForm.get('rating').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
-          <mat-error *ngIf="productForm.get('rating').hasError('max')"
+          <mat-error style='color:red'*ngIf="productForm.get('rating').hasError('max')"
             >Max rating is <strong>10</strong></mat-error
           >
         </mat-form-field>
@@ -146,11 +140,11 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-          <!--<mat-label>Brand</mat-label>-->
+          <label><strong>Brand*</strong></label>
           <input type="text" matInput formControlName="{{ appConstant.forms.product.brand }}" 
                  placeholder="Brand">
          
-          <mat-error *ngIf="productForm.get('brand').hasError('required')">
+          <mat-error style='color:red' *ngIf="productForm.get('brand').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -158,17 +152,15 @@
 
       <div class="col-12 md:col-6 lg:col-3">
         <mat-form-field class="example-full-width" appearance="fill">
-        <!--  <mat-label>Stock</mat-label>-->
+        <label>Stock*</label>
           <input type="number" matInput formControlName="{{ appConstant.forms.product.stock }}" 
                  placeholder="Stock">
           
-          <mat-error *ngIf="productForm.get('stock').hasError('required')">
+          <mat-error style='color:red' *ngIf="productForm.get('stock').hasError('required')">
             This Field is <strong>required</strong>
           </mat-error>
         </mat-form-field>
       </div>
-
-
 
   </div>
 
