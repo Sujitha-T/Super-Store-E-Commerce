@@ -1,20 +1,49 @@
-import { Component, OnInit } from '@angular/core';
-import { Validators,FormBuilder, FormGroup } from '@angular/forms';
-//import { appConstant } from 'src/app/app.constant';
-//import { CommonService } from 'src/app/service/common.service';
+import { Component,EventEmitter, Input,Output, OnInit } from '@angular/core';
+import { appConstant } from '../../app.constant';
+import { CommonService } from '../../service/common.service';
+import { Product } from '../../module/product';
+import { ApiService } from '../../service/api.service';
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.css']
+  styleUrls: ['./product-form.component.scss']
 })
 export class ProductFormComponent implements OnInit {
-  productForm:FormGroup|undefined;
-  //constructor(private commonService: CommonService) { }
+  productForm:any;
+  max:number=10;
+  id: number | String = '';
 
-  ngOnInit() {
+  @Input() product:Product;
+  @Output() submit: EventEmitter<boolean>=new EventEmitter(false);
+  constructor(private commonService: CommonService, private apiService: ApiService) { }
+
+  ngOnInit() :void{
+    console.log(this.product);
+    if (this.product){
+      this.initializeForm(this.product)
+    }
   }
- // get appConstant() {
-   // return appConstant;
- // }
-
+  initializeForm(product: any) {
+    this.productForm = this.commonService.createProductForm(product);
+  }
+  get appConstant() {
+    return appConstant;
+  }
+  onSubmit(formData: any, isValid: boolean) {
+    if (isValid) {
+      //console.log(formData);
+      this.apiService
+        .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
+        .subscribe(
+          (data) => {
+            console.log('data updated');
+            console.log(data);
+            this.submit.emit(true);
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
+    }
+  }
 }

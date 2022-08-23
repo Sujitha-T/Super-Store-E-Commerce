@@ -9,12 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   imports: [
     CommonModule,SharedModule,HttpClientModule,MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,MatGridListModule,MatIconModule,MatButtonModule
   ],
-  declarations: [CatalogueComponent],
-  exports:[CatalogueComponent]
+  declarations: [CatalogueComponent,ProductFormComponent,ProductListComponent],
+  exports:[CatalogueComponent,ProductFormComponent,ProductListComponent]
 })
 export class CatalogueModule { }

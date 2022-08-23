@@ -1,0 +1,26 @@
+
+.f-center{
+  display:flex;
+  justify-content: center;
+ 
+ button{font-weight: 200;
+  font-size:large;
+  margin-top:20px;
+  color:black;
+background-color: rgb(255, 0, 43);}
+ button:hover{
+   border:1px solid;
+   box-shadow:1rem;
+   color:black;
+   background-color: #6de91b;
+ }
+}
+.product-form{
+  background-color: lightblue;
+  padding:50px;
+}
+.example-full-width{
+  width: 100%;
+  
+  background-color:white;}
+  

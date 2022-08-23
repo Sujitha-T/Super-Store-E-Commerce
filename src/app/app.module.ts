@@ -19,11 +19,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ProductFormComponent } from './catalogue/product-form/product-form.component';
+import { ProductListComponent } from './catalogue/product-list/product-list.component';
 //import { CatalogueModule } from './catalogue/catalogue.module';
 //import { Validators,  FormGroup } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent,CatalogueComponent],
+  declarations: [AppComponent, ProductComponent,CatalogueComponent,ProductFormComponent,ProductListComponent],
   imports: [
     //Validators,
     //FormGroup,

@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { appConstant } from '../app.constant';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
+  productMessageSubject:Subject<boolean>= new Subject();
+  $productMessageObservable: Observable<boolean> = this.productMessageSubject.asObservable()
 
   constructor(private fb: FormBuilder,) { }
 
@@ -21,4 +24,13 @@ export class CommonService {
       [appConstant.forms.product.rating]: [product.rating,[ Validators.compose([Validators.required, Validators.max(10)])]],
     });
   }
+  sendProductMessage(data:boolean){
+    this.productMessageSubject.next(data);
+  }
+  getProductMessage():Observable<boolean>{
+    return this.$productMessageObservable;
+  }
+
+
+
 }

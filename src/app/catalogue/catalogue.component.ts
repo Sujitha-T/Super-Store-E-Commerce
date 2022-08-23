@@ -15,9 +15,9 @@ import { CommonService } from '../service/common.service';
 })
 export class CatalogueComponent implements OnInit {
   product: Product | any = '';
-  productForm:FormGroup|undefined;
+  //productForm:FormGroup|undefined;
   id: number | String = '';
-  max:number=10;
+  //max:number=10;
   showMessage :boolean=false;
 
 
@@ -33,7 +33,7 @@ export class CatalogueComponent implements OnInit {
     this.activatedRoute.params.subscribe((data) => {
       this.getAbout((data as any).id);
     });
-    this.initialize();
+   // this.initialize();
   }
 
   get appConstant() {
@@ -41,14 +41,14 @@ export class CatalogueComponent implements OnInit {
   }
 
 
-initialize(){
-  this.initializeForm(this.product);
-}
+//initialize(){
+ // this.initializeForm(this.product);
+//}
 
 
-initializeForm(product: any) {
-  this.productForm = this.commonService.createProductForm(product);
-}
+// initializeForm(product: any) {
+//   this.productForm = this.commonService.createProductForm(product);
+// }
 
 
 
@@ -57,7 +57,7 @@ initializeForm(product: any) {
       .get(`${environment.dummyurl}${appConstant.apiRoute.products}/${id}`)
       .subscribe((data) => {
         this.product = data;
-        this.initializeForm(data);
+       // this.initializeForm(data);
         console.log(data);
       });
   }
@@ -73,22 +73,22 @@ initializeForm(product: any) {
 
 }*/
 
-onSubmit(formData: any, isValid: boolean) {
-  if (isValid) {
-    console.log(formData);
-    this.apiService
-      .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
-      .subscribe(
-        (data) => {
-          console.log('data updated');
-          console.log(data);
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
-  }
-}
+// onSubmit(formData: any, isValid: boolean) {
+//   if (isValid) {
+//     console.log(formData);
+//     this.apiService
+//       .httpPut(`${appConstant.apiRoute.products}/${this.id}`, formData)
+//       .subscribe(
+//         (data) => {
+//           console.log('data updated');
+//           console.log(data);
+//         },
+//         (err) => {
+//           console.log(err);
+//         }
+//       );
+//   }
+// }
 productUpdate(event: boolean){
   if (!(event as any).target){
     this.showMessage= event;
