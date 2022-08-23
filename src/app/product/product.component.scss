@@ -10,6 +10,7 @@
 .content{
   background-color: rgb(123, 187, 230);
 padding: 20px;
+
 }
 h1{
   font-size:30px;
@@ -34,6 +35,9 @@ mat-card {
   height: 100%;
   background-color: rgb(255, 255, 255);
 }
+.example-card{
+  padding: 10px 10px;
+}
 
 .mat-card-header {
   background-color: rgb(0, 247, 255);
@@ -48,4 +52,8 @@ button:hover {
   background-color: rgb(0, 225, 255);
   border:none;
   font-weight:bold;
+}
+.paginator{
+  background-color:rgb(170, 224, 241);
+  
 }
